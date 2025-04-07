@@ -60,3 +60,21 @@ The EDA findings directly shape the modeling strategy for Phase 3:
   - **Exogenous Variables**: Include NOx(GT) and C6H6(GT) due to high correlations, but address multicollinearity (e.g., via PCA or feature selection). Weather data (e.g., temperature, wind) could model residual spikes.
 - **Preprocessing**:
   - Replace -200 values with imputed estimates (e.g., mean or interpolated
+
+(.venv) (base) shrenyamathur@Shrenyas-MacBook-Air kafka % python eda.py 
+                     CO(GT)  NOx(GT)  C6H6(GT)
+DateTime                                      
+2004-03-10 18:00:00     2.6    166.0      11.9
+2004-03-10 19:00:00     2.0    103.0       9.4
+2004-03-10 20:00:00     2.2    131.0       9.0
+2004-03-10 21:00:00     2.2    172.0       9.2
+2004-03-10 22:00:00     1.6    131.0       6.5
+            CO(GT)      NOx(GT)     C6H6(GT)
+count  9495.000000  9495.000000  9495.000000
+mean      2.082528   240.705003    10.200948
+std       1.459714   205.248622     7.517455
+min       0.100000     2.000000     0.100000
+25%       1.000000    98.000000     4.400000
+50%       1.700000   176.000000     8.400000
+75%       2.700000   314.500000    13.900000
+max      11.900000  1479.000000    63.700000
